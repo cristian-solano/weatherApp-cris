@@ -21,3 +21,7 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+#icons
+/amcharts_weather_icons_1.0.0'
+/.animated

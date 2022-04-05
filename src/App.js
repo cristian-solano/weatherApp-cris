@@ -1,23 +1,25 @@
-import logo from './logo.svg';
 import './App.css';
+import WeatherInfo from './Components/WeatherInfo';
+import Button from './Components/Button'
+
 
 function App() {
+
+  
+
+  
+
+    
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="App content p-4 bg">
+      <div className='row'>
+        <div className="col-md-4 mx-auto card text-dark bg-info mb-3 items">
+          
+          <WeatherInfo />
+          <Button/>
+          
+        </div>
+      </div>
     </div>
   );
 }
