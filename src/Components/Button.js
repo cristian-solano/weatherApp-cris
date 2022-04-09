@@ -14,7 +14,7 @@ const Button = () => {
         navigator.geolocation.getCurrentPosition(function(pos) {
 
             getWeatherOfCountry(pos.coords.latitude, pos.coords.longitude).then(res => {
-                setTemperature(res.data.main.temp)
+                setTemperature(res.data.main.temp -273)
             })
             .catch(err => {
                 console.log(err)    
@@ -26,7 +26,7 @@ const Button = () => {
 
     return (
         <div className>
-            <h1>{isCelcius ? temperature: (temperature * 9 /5 ) + 32 }{
+            <h1>{isCelcius ? temperature: ((temperature * 9 /5 ) + 32)  }{
                 isCelcius ? 'C' : 'F'
             }</h1>
             <button onClick={() => setIsCelcius(!isCelcius)} type="button" className="btn btn-light but">Change to {isCelcius ? 'Fahrenheit' : 'Celcius'}</button>

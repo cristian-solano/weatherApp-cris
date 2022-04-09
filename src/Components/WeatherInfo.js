@@ -12,6 +12,7 @@ const WeatherInfo = () => {
     const [longitude, setLongitude] = useState('')
     const [weather, setWeather] = useState([])
     const [humidity, setHumidity] = useState('')
+    const [icon, setIcon] = useState('')
     
     
 
@@ -29,6 +30,7 @@ const WeatherInfo = () => {
             setCountry(res.data.sys.country)
             setWeather(res.data.weather[0].main)
             setHumidity(res.data.main.humidity)
+            setCountry(res.data.weather[0].icon)
 
         })
             .catch(err => {
@@ -54,6 +56,7 @@ const WeatherInfo = () => {
             <p>{latitude}</p>
             <p>{longitude}</p>
             <p>{`Humidity: ${humidity}`} </p>
+            <img src={`http://openweathermap.org/img/wn/${icon}2x.png`} alt="img" />
             <h4>{weather}</h4>
             
             
